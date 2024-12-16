@@ -11,6 +11,12 @@ class Asset extends Model
   /** @use HasFactory<\Database\Factories\Redooor\Redminschema\Models\AssetFactory> */
   use HasFactory;
 
+  /**
+   * Specify table name so that it can be extended
+   * Apply the table to all models extending from Asset
+   */
+  protected $table = "assets";
+
   protected static function newFactory()
   {
     return AssetFactory::new();

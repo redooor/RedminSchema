@@ -11,6 +11,12 @@ class Schema extends Model
   /** @use HasFactory<\Database\Factories\Redooor\Redminschema\Models\SchemaFactory> */
   use HasFactory;
 
+  /**
+   * Specify table name so that it can be extended
+   * Apply the table to all models extending from Schema
+   */
+  protected $table = "schemas";
+
   protected static function newFactory()
   {
     return SchemaFactory::new();
