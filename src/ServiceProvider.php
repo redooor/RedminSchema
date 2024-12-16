@@ -23,6 +23,6 @@ class ServiceProvider extends LaravelServiceProvider
     AboutCommand::add('RedminSchema', fn() => ['Version' => '1.0.0']);
 
     // Load migrations
-    $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+    $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
   }
 }

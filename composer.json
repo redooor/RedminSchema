@@ -1,21 +1,37 @@
 {
-    "name": "redooor/redminschema",
-    "description": "A Schematic JSON Database package designed for use in Laravel.",
-    "type": "library",
-    "require": {
-        "laravel/framework": "^11.35"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Redooor\\Redminschema\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Redooor LLP",
-            "email": "support@redooor.com"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "redooor/redminschema",
+  "description": "A Schematic JSON Database package designed for use in Laravel.",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "laravel/framework": "^11.35"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^9.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Redooor\\Redminschema\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Redooor\\Redminschema\\Tests\\": "tests/",
+      "Database\\Factories\\Redooor\\Redminschema\\": "database/factories/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Redooor\\Redminschema\\ServiceProvider"
+      ]
+    }
+  },
+  "authors": [
+    {
+      "name": "Redooor LLP",
+      "email": "support@redooor.com"
+    }
+  ],
+  "minimum-stability": "stable"
 }

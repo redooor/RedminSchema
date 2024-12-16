@@ -2,18 +2,29 @@
 
 namespace Redooor\Redminschema\Models;
 
+use Database\Factories\Redooor\Redminschema\Models\SchemaFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Redooor\Redminschema\Database\Factories\SchemaFactory;
 
 class Schema extends Model
 {
-  /** @use HasFactory<\Redooor\Redminschema\Database\Factories\SchemaFactory> */
+  /** @use HasFactory<\Database\Factories\Redooor\Redminschema\Models\SchemaFactory> */
   use HasFactory;
 
   protected static function newFactory()
   {
-    // Tell workbench where to find the factory
     return SchemaFactory::new();
+  }
+
+  /**
+   * Get the attributes that should be cast.
+   *
+   * @return array<string, string>
+   */
+  protected function casts(): array
+  {
+    return [
+      'document' => 'array',
+    ];
   }
 }
