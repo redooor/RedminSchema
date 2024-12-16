@@ -1,0 +1,21 @@
+{
+    "name": "redooor/redminschema",
+    "description": "A Schematic JSON Database package designed for use in Laravel.",
+    "type": "library",
+    "require": {
+        "laravel/framework": "^11.35"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Redooor\\Redminschema\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Redooor LLP",
+            "email": "support@redooor.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
