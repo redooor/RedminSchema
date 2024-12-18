@@ -1,6 +1,6 @@
 {
   "name": "redooor/redminschema",
-  "description": "A Schematic JSON Database package designed for use in Laravel.",
+  "description": "A very simplified database structure for use with Laravel.",
   "type": "library",
   "license": "MIT",
   "require": {
