@@ -28,11 +28,9 @@ class AssetFactory extends Factory
     return [
       "schema" => "schema.dummy.test",
       "owner" => "123",
-      "name" => fake()->name(),
-      "description" => fake()->words(3, true),
       "document" => [
-        "firstname" => "string",
-        "lastname" => "string"
+        "name" => fake()->name(),
+        "description" => fake()->words(3, true),
       ]
     ];
   }

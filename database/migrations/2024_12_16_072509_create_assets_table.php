@@ -20,8 +20,6 @@ return new class extends Migration
             $table->string('schema', 255); // E.g. schema.type.order
             $table->string('uuid', 255)->unique(); // E.g. 5fbcb4837d8cc5.32021334
             $table->string('owner', 255)->nullable(); // E.g. Parent ID
-            $table->string("name");
-            $table->string("description")->nullable();
             $table->json("document");
             $table->timestamps();
         });
