@@ -3,7 +3,6 @@
 namespace Redooor\Redminschema\Tests\Models;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Redooor\Redminschema\Models\Schema;
 use Redooor\Redminschema\Tests\TestCase;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Redooor\Redminschema\Models\Asset;
@@ -19,12 +18,12 @@ class AssetTest extends TestCase
   {
     $this->assertDatabaseCount("assets", 0);
 
-    $schema = Schema::factory()->create();
-    $asset = Asset::factory()->create([
-      "schema_id" => $schema->id
-    ]);
+    $asset = Asset::factory()->create();
     $this->assertDatabaseHas('assets', [
       'id' => $asset->id,
+    ]);
+    $this->assertDatabaseHas('assets', [
+      'uuid' => $asset->uuid,
     ]);
   }
 }

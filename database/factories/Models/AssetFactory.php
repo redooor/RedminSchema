@@ -26,13 +26,14 @@ class AssetFactory extends Factory
   public function definition(): array
   {
     return [
+      "schema" => "schema.dummy.test",
+      "owner" => "123",
       "name" => fake()->name(),
       "description" => fake()->words(3, true),
       "document" => [
         "firstname" => "string",
         "lastname" => "string"
-      ],
-      "schema_id" => Schema::factory()
+      ]
     ];
   }
 }
